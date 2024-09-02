@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter媒体隐藏器",
+  "version": "1.0",
+  "description": "隐藏Twitter时间线上的图片和视频",
+  "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
